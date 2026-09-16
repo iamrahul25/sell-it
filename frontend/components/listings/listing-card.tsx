@@ -21,7 +21,7 @@ export function ListingCard({
       className="group relative overflow-hidden rounded-xl border border-line bg-white shadow-[0_1px_3px_rgba(15,23,42,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_28px_rgba(15,23,42,0.1)]"
     >
       <Link
-        href={`/listings/${listing.slug}`}
+        href={`/listing/${listing.slug}`}
         aria-label={`View ${listing.title}`}
         className={view === "list" ? "flex" : "block"}
       >

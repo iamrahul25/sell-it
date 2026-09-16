@@ -118,6 +118,45 @@ const additionalListings: Listing[] = [
 
 export const listings = [...existingListings, ...additionalListings];
 
+export function getListingBySlug(slug: string): Listing | undefined {
+  return listings.find((listing) => listing.slug === slug);
+}
+
+export function getGalleryImages(listing: Listing): string[] {
+  const categoryImages: Record<string, string[]> = {
+    mobiles: [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+      "https://images.unsplash.com/photo-1605236453806-6ff36851218e",
+      "https://images.unsplash.com/photo-1585060544812-6b45742d762f",
+      "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+    ],
+    laptops: [
+      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+      "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    ],
+    furniture: [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+      "https://images.unsplash.com/photo-1567016432779-094069958ea5",
+      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6",
+    ],
+    electronics: [
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+      "https://images.unsplash.com/photo-1498049794561-7780e7231661",
+      "https://images.unsplash.com/photo-1550009158-9ebf69173e03",
+    ],
+  };
+
+  const categoryGallery =
+    categoryImages[listing.category] ?? [
+      "https://images.unsplash.com/photo-1472851294608-062f824d29cc",
+      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+    ];
+
+  return [listing.imageUrl, ...categoryGallery, listing.imageUrl, listing.imageUrl];
+}
+
 export const listingCategories = [
   { label: "Mobiles", value: "mobiles", count: 124 },
   { label: "Laptops", value: "laptops", count: 89 },
