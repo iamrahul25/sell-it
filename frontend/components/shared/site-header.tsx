@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Bell, ChevronDown, MapPin, Plus, Search, User } from "lucide-react";
 
 function LocationPill() {
@@ -31,6 +34,8 @@ function SearchBar() {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-4 px-4">
@@ -49,13 +54,21 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-1 xl:flex">
           <Link
             href="/listings"
-            className="px-2 text-sm font-medium text-ink transition hover:text-brand"
+            className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+              pathname === "/listings"
+                ? "bg-brand-soft text-brand"
+                : "text-ink hover:text-brand"
+            }`}
           >
             Buy
           </Link>
           <Link
             href="/sell"
-            className="px-2 text-sm font-medium text-ink transition hover:text-brand"
+            className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
+              pathname === "/sell"
+                ? "bg-brand-soft text-brand"
+                : "text-ink hover:text-brand"
+            }`}
           >
             Sell
           </Link>
