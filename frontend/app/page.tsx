@@ -1,29 +1,25 @@
-async function getBackendMessage() {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+import { CategoryBar } from "@/components/category-bar";
+import { FeaturedListings } from "@/components/featured-listings";
+import { HeroSection } from "@/components/hero-section";
+import { HowItWorks } from "@/components/how-it-works";
+import { SustainabilityBanner } from "@/components/sustainability-banner";
+import { TrustStrip } from "@/components/trust-strip";
+import { formatPostedAt, getFeaturedProducts } from "@/lib/data";
 
-  try {
-    const res = await fetch(apiUrl, { cache: "no-store" });
-    if (!res.ok) {
-      return { error: `Backend responded with ${res.status}` };
-    }
-    return await res.json();
-  } catch {
-    return { error: "Could not reach backend. Is it running?" };
-  }
-}
-
-export default async function HomePage() {
-  const data = await getBackendMessage();
+export default function HomePage() {
+  const featuredItems = getFeaturedProducts().map((product) => ({
+    product,
+    postedLabel: formatPostedAt(product.createdAt),
+  }));
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Sell It</h1>
-      <p>Frontend is running.</p>
-      {"message" in data ? (
-        <p>Backend: {data.message}</p>
-      ) : (
-        <p style={{ color: "crimson" }}>{data.error}</p>
-      )}
+    <main>
+      <HeroSection />
+      <CategoryBar />
+      <FeaturedListings items={featuredItems} />
+      <SustainabilityBanner />
+      <HowItWorks />
+      <TrustStrip />
     </main>
   );
 }

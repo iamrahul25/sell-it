@@ -42,3 +42,20 @@ npm run dev
 
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5000
+
+## Frontend structure
+
+```
+frontend/
+  app/            # routes, layout, global styles
+  components/     # home page sections
+  data/           # dummy JSON data (stands in for MongoDB)
+  lib/data.ts     # loads the JSON and formats price / posted time
+```
+
+### Dummy data
+
+`data/products.json` and `data/categories.json` mimic MongoDB collections
+(`_id`, nested `location` / `seller`, `createdAt`). The home page reads them
+through `lib/data.ts`, so swapping to a real API later only means changing that
+one file.

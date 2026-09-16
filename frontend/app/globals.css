@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #0a9f4a;
+  --color-brand-dark: #078039;
+  --color-brand-soft: #ecfdf3;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  color: var(--color-ink);
+  background: #ffffff;
+}

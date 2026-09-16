@@ -1,0 +1,114 @@
+[
+  {
+    "_id": "66e89f01c3b9a2d4e8f30001",
+    "name": "Mobiles",
+    "slug": "mobiles",
+    "icon": "mobiles",
+    "accent": "#EEF2FF",
+    "listingCount": 124
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30002",
+    "name": "Laptops",
+    "slug": "laptops",
+    "icon": "laptops",
+    "accent": "#EFF6FF",
+    "listingCount": 89
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30003",
+    "name": "Electronics",
+    "slug": "electronics",
+    "icon": "electronics",
+    "accent": "#ECFDF3",
+    "listingCount": 103
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30004",
+    "name": "Furniture",
+    "slug": "furniture",
+    "icon": "furniture",
+    "accent": "#F0FDFA",
+    "listingCount": 56
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30005",
+    "name": "Home & Living",
+    "slug": "home-living",
+    "icon": "home-living",
+    "accent": "#FFFBEB",
+    "listingCount": 67
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30006",
+    "name": "Bikes",
+    "slug": "bikes",
+    "icon": "bikes",
+    "accent": "#EFF6FF",
+    "listingCount": 34
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30007",
+    "name": "Cars",
+    "slug": "cars",
+    "icon": "cars",
+    "accent": "#FEF2F2",
+    "listingCount": 21
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30008",
+    "name": "Fashion",
+    "slug": "fashion",
+    "icon": "fashion",
+    "accent": "#F5F3FF",
+    "listingCount": 92
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30009",
+    "name": "Books",
+    "slug": "books",
+    "icon": "books",
+    "accent": "#FDF4FF",
+    "listingCount": 28
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30010",
+    "name": "Sports",
+    "slug": "sports",
+    "icon": "sports",
+    "accent": "#EEF2FF",
+    "listingCount": 41
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30011",
+    "name": "Kids",
+    "slug": "kids",
+    "icon": "kids",
+    "accent": "#FFF7ED",
+    "listingCount": 37
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30012",
+    "name": "Pets",
+    "slug": "pets",
+    "icon": "pets",
+    "accent": "#FEF2F2",
+    "listingCount": 12
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30013",
+    "name": "Services",
+    "slug": "services",
+    "icon": "services",
+    "accent": "#EFF6FF",
+    "listingCount": 45
+  },
+  {
+    "_id": "66e89f01c3b9a2d4e8f30014",
+    "name": "Other",
+    "slug": "other",
+    "icon": "other",
+    "accent": "#F1F5F9",
+    "listingCount": 21
+  }
+]
