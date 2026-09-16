@@ -1,4 +1,4 @@
-import { CategoryIcon } from "@/components/category-icon";
+import { CategoryIcon } from "@/components/home/category-icon";
 import { categories } from "@/lib/data";
 
 export function CategoryBar() {

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { ProductCard } from "@/components/product-card";
+import { ProductCard } from "@/components/shared/product-card";
 import type { Product } from "@/lib/data";
 
 export type FeaturedItem = {

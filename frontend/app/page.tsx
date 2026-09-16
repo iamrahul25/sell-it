@@ -1,9 +1,9 @@
-import { CategoryBar } from "@/components/category-bar";
-import { FeaturedListings } from "@/components/featured-listings";
-import { HeroSection } from "@/components/hero-section";
-import { HowItWorks } from "@/components/how-it-works";
-import { SustainabilityBanner } from "@/components/sustainability-banner";
-import { TrustStrip } from "@/components/trust-strip";
+import { CategoryBar } from "@/components/home/category-bar";
+import { FeaturedListings } from "@/components/home/featured-listings";
+import { HeroSection } from "@/components/home/hero-section";
+import { HowItWorks } from "@/components/home/how-it-works";
+import { SustainabilityBanner } from "@/components/home/sustainability-banner";
+import { TrustStrip } from "@/components/home/trust-strip";
 import { formatPostedAt, getFeaturedProducts } from "@/lib/data";
 
 export default function HomePage() {
