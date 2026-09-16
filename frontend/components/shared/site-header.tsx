@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Bell, ChevronDown, MapPin, Plus, Search, User } from "lucide-react";
 
 function LocationPill() {
@@ -32,8 +33,8 @@ function SearchBar() {
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white">
-      <div className="mx-auto flex h-16 max-w-[1240px] items-center gap-4 px-4">
-        <a href="/" className="flex shrink-0 items-center gap-2">
+      <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-4 px-4">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
           <span className="grid size-9 place-items-center rounded-xl bg-brand text-lg font-bold text-white">
             S
           </span>
@@ -43,26 +44,35 @@ export function SiteHeader() {
               Buy. Sell. Reuse. Better Together.
             </span>
           </span>
-        </a>
+        </Link>
+
+        <nav className="hidden items-center gap-1 xl:flex">
+          <Link
+            href="/listings"
+            className="px-2 text-sm font-medium text-ink transition hover:text-brand"
+          >
+            Buy
+          </Link>
+          <Link
+            href="/sell"
+            className="px-2 text-sm font-medium text-ink transition hover:text-brand"
+          >
+            Sell
+          </Link>
+          <button className="flex items-center gap-1 px-2 text-sm font-medium text-ink transition hover:text-brand">
+            Categories
+            <ChevronDown className="size-4" strokeWidth={1.75} />
+          </button>
+        </nav>
 
         <div className="hidden flex-1 items-center gap-2.5 md:flex">
           <LocationPill />
-          <div className="max-w-[520px] flex-1">
+          <div className="max-w-[560px] flex-1">
             <SearchBar />
           </div>
         </div>
 
         <div className="ml-auto flex items-center gap-1 md:gap-3">
-          <button className="hidden items-center gap-1 px-2 text-sm font-medium text-ink transition hover:text-brand lg:flex">
-            Categories
-            <ChevronDown className="size-4" strokeWidth={1.75} />
-          </button>
-          <a
-            href="#how-it-works"
-            className="hidden px-2 text-sm font-medium text-ink transition hover:text-brand lg:block"
-          >
-            Help
-          </a>
           <button
             aria-label="Notifications"
             className="grid size-9 place-items-center rounded-full text-muted transition hover:bg-brand-soft hover:text-brand"
@@ -75,10 +85,13 @@ export function SiteHeader() {
             </span>
             <span className="hidden sm:block">Sign In</span>
           </button>
-          <button className="flex h-10 items-center gap-1.5 rounded-full bg-brand px-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark">
+          <Link
+            href="/sell"
+            className="flex h-10 items-center gap-1.5 rounded-full bg-brand px-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"
+          >
             <Plus className="size-4" strokeWidth={2.5} />
-            <span className="hidden sm:block">Post Your Ad</span>
-          </button>
+            <span className="hidden sm:block">Post Ad</span>
+          </Link>
         </div>
       </div>
 
