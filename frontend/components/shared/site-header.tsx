@@ -92,12 +92,18 @@ export function SiteHeader() {
           >
             <Bell className="size-5" strokeWidth={1.75} />
           </button>
-          <button className="flex items-center gap-2 rounded-full pl-1 pr-2 text-sm font-medium transition hover:text-brand">
+          <Link
+            href="/profile"
+            aria-label="Open profile"
+            className={`flex items-center gap-2 rounded-full pl-1 pr-2 text-sm font-medium transition hover:text-brand ${
+              pathname === "/profile" ? "text-brand" : ""
+            }`}
+          >
             <span className="grid size-8 place-items-center rounded-full bg-line/70 text-muted">
               <User className="size-4" strokeWidth={1.75} />
             </span>
             <span className="hidden sm:block">Sign In</span>
-          </button>
+          </Link>
           <Link
             href="/sell"
             className="flex h-10 items-center gap-1.5 rounded-full bg-brand px-3.5 text-sm font-semibold text-white transition hover:bg-brand-dark"

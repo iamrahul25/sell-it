@@ -10,11 +10,13 @@ import type { Listing } from "@/lib/listings";
 export function ListingCard({
   listing,
   view,
+  defaultFavorite = false,
 }: {
   listing: Listing;
   view: "grid" | "list";
+  defaultFavorite?: boolean;
 }) {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(defaultFavorite);
 
   return (
     <article
